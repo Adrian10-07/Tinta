@@ -9,8 +9,59 @@
 </head>
 <body>
 
+<!-- INLINE SVG SPRITE — zero CDN dependency -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="s-book" viewBox="0 0 24 24"><path d="M3 19a9 9 0 0 1 9 0 9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0 9 9 0 0 1 9 0M3 6v13M12 6v13M21 6v13" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="s-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="s-rocket" viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 7 7 6 6 0 0 0 3-5 9 9 0 0 0 6-8 3 3 0 0 0-3-3 9 9 0 0 0-8 6 6 6 0 0 0-5 3"/><path d="M7 14a6 6 0 0 0-3 6 6 6 0 0 0 6-3"/><circle cx="15" cy="9" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-star4" viewBox="0 0 24 24"><path d="M12 3l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></symbol>
+  <symbol id="s-emoji-sad" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/><path d="M9.5 16a3.5 3.5 0 0 1 5 0"/></symbol>
+  <symbol id="s-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18"/></symbol>
+  <symbol id="s-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0-3-3.85"/></symbol>
+  <symbol id="s-alert" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-bulb" viewBox="0 0 24 24"><path d="M9 21h6M12 3a6 6 0 0 1 6 6c0 2.22-1.21 4.16-3 5.2V17H9v-2.8A6 6 0 0 1 6 9a6 6 0 0 1 6-6z"/></symbol>
+  <symbol id="s-minus" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+  <symbol id="s-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+  <symbol id="s-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="9" y1="10" x2="9.01" y2="10" stroke-width="2"/><line x1="12" y1="10" x2="12.01" y2="10" stroke-width="2"/><line x1="15" y1="10" x2="15.01" y2="10" stroke-width="2"/></symbol>
+  <symbol id="s-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+  <symbol id="s-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="s-stars" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></symbol>
+  <symbol id="s-group" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="s-reload" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></symbol>
+  <symbol id="s-tag" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7" stroke-width="3"/></symbol>
+  <symbol id="s-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></symbol>
+  <symbol id="s-books" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+  <symbol id="s-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17" stroke-width="3"/></symbol>
+  <symbol id="s-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+  <symbol id="s-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2z"/></symbol>
+  <symbol id="s-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></symbol>
+  <symbol id="s-tablet" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/></symbol>
+  <symbol id="s-headphones" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></symbol>
+  <symbol id="s-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="s-cpu" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3M20 9h-3M20 12h-3M20 15h-3M4 9h3M4 12h3M4 15h3"/></symbol>
+  <symbol id="s-brain" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.14z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24A2.5 2.5 0 0 0 14.5 2z"/></symbol>
+  <symbol id="s-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6" stroke-width="3"/><line x1="6" y1="18" x2="6.01" y2="18" stroke-width="3"/></symbol>
+  <symbol id="s-translate" viewBox="0 0 24 24"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1m15 20-5-10-5 10M14 18h6"/></symbol>
+  <symbol id="s-vector" viewBox="0 0 24 24"><circle cx="3" cy="12" r="2"/><circle cx="21" cy="12" r="2"/><circle cx="12" cy="3" r="2"/><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="11"/></symbol>
+  <symbol id="s-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="s-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><circle cx="7" cy="16" r="2"/><circle cx="12" cy="10" r="2"/><circle cx="17" cy="7" r="2"/></symbol>
+  <symbol id="s-refresh" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-5.5L1 10"/></symbol>
+  <symbol id="s-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/></symbol>
+  <symbol id="s-school" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 1.5 3 6 3s6-1 6-3v-5"/></symbol>
+  <symbol id="s-building" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6M3 15h6M13 7h2M13 11h2M13 15h2"/></symbol>
+  <symbol id="s-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="s-send" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></symbol>
+  <symbol id="s-nocard" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="2" y1="2" x2="22" y2="22" stroke-width="1.5"/></symbol>
+  <symbol id="s-gift" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+</svg>
+
+<!-- NAV -->
 <nav>
-  <span class="nav-logo">Tinta</span>
+  <span class="nav-logo">
+    <span class="ico" style="width:22px;height:22px;color:var(--dorado)"><svg width="22" height="22"><use href="#s-book"/></svg></span>
+    Tinta
+  </span>
   <ul class="nav-links">
     <li><a href="#funcionalidades">Funcionalidades</a></li>
     <li><a href="#ia">Tecnología</a></li>
@@ -21,49 +72,52 @@
 </nav>
 
 <section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-lines"></div>
+  <div class="hero-bg"></div><div class="hero-lines"></div>
   <div class="hero-content">
-    <span class="hero-eyebrow">Club de lectura digital · IA local · Privacidad primero</span>
+    <span class="hero-eyebrow">
+      <span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use"/></svg></span>
+      Club de lectura digital · IA local · Privacidad 
+    </span>
     <h1 class="hero-title">Lee más.<br><em>Entiende</em> más.<br>Conecta más.</h1>
     <p class="hero-sub">Tinta es la primera plataforma de lectura social con inteligencia artificial completamente autoalojada. Sin depender de OpenAI. Sin exponer tus datos. Solo tú, tus libros y una IA que te conoce.</p>
     <div class="hero-btns">
-      <a href="#cta" class="btn-primary">Unirme a la beta</a>
-      <a href="#funcionalidades" class="btn-secondary">Ver funcionalidades</a>
+      <a href="#funcionalidades" class="btn-primary">
+        <span class="ico" style="width:18px;height:18px"><svg width="18" height="18"><use href="#s-rocket"/></svg></span>
+        Funcionalidades
+      </a>
     </div>
   </div>
-  <div class="hero-badge">
-    <span class="badge-item"><span class="badge-dot"></span>ML no supervisado</span>
-    <span class="badge-item"><span class="badge-dot"></span>LLM autoalojado</span>
-    <span class="badge-item"><span class="badge-dot"></span>Privacidad total</span>
-    <span class="badge-item"><span class="badge-dot"></span>Open Weights</span>
-  </div>
+
 </section>
 
 <section id="stats">
   <div class="container">
     <p class="section-label reveal">Por qué es necesaria</p>
     <h2 class="section-title reveal">Los lectores están <span class="ink-underline">solos</span> en la era digital</h2>
-    <p class="section-desc reveal">Los hábitos de lectura cambiaron. Las herramientas no. Aquí están los datos que evidencian el problema que Tinta viene a resolver.</p>
-    <div class="stats-grid">
-      <div class="stat-card reveal">
+    <p class="section-desc reveal">Los hábitos de lectura cambiaron. Las herramientas no. Aquí están los datos que evidencian el problema.</p>
+    <div class="stats-grid stagger">
+      <div class="stat-card reveal-scale">
+        <div class="stat-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-emoji-sad"/></svg></span></div>
         <div class="stat-num">57%</div>
-        <div class="stat-label">de lectores digitales abandona libros a mitad por falta de motivación o comunidad de apoyo</div>
+        <div class="stat-label">de lectores digitales abandona libros a mitad por falta de motivación o comunidad</div>
         <div class="stat-source">Fuente: Pew Research Center, 2023</div>
       </div>
-      <div class="stat-card reveal">
+      <div class="stat-card reveal-scale">
+        <div class="stat-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-globe"/></svg></span></div>
         <div class="stat-num">4.7B</div>
         <div class="stat-label">de personas leen digitalmente, pero menos del 12% usa alguna plataforma social de lectura activa</div>
         <div class="stat-source">Fuente: Statista Digital Reading Report, 2024</div>
       </div>
-      <div class="stat-card reveal">
+      <div class="stat-card reveal-scale">
+        <div class="stat-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-target"/></svg></span></div>
         <div class="stat-num">89%</div>
-        <div class="stat-label">de usuarios de apps de lectura desea recomendaciones más personalizadas que las actuales</div>
+        <div class="stat-label">de usuarios desea recomendaciones más personalizadas que las que ofrecen las apps actuales</div>
         <div class="stat-source">Fuente: McKinsey Consumer Insights, 2023</div>
       </div>
-      <div class="stat-card reveal">
+      <div class="stat-card reveal-scale">
+        <div class="stat-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-users"/></svg></span></div>
         <div class="stat-num">3x</div>
-        <div class="stat-label">más retención de lectura cuando los usuarios forman parte de un club activo con discusiones guiadas</div>
+        <div class="stat-label">más retención cuando los usuarios forman parte de un club activo con discusiones guiadas</div>
         <div class="stat-source">Fuente: Goodreads Internal Study, 2022</div>
       </div>
     </div>
@@ -74,27 +128,25 @@
   <div class="container">
     <p class="section-label reveal">El punto de partida</p>
     <h2 class="section-title reveal">Un problema real con<br>una solución <span class="ink-underline">inteligente</span></h2>
-    <div class="prob-sol-grid reveal">
-      <div class="prob-box">
-        <div class="prob-sol-icon">📖</div>
+    <div class="prob-sol-grid">
+      <div class="prob-box reveal-left">
+        <div class="ps-icon"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-alert"/></svg></span></div>
         <div class="prob-sol-title">La problemática</div>
         <ul class="prob-sol-list">
-          <li>Los lectores digitales carecen de un espacio social que entienda sus hábitos y los conecte con personas afines</li>
-          <li>Las apps existentes ofrecen recomendaciones genéricas basadas en popularidad, no en el perfil real del lector</li>
-          <li>Ninguna plataforma integra un asistente IA capaz de conversar sobre el libro sin enviar tu contenido a servidores externos</li>
-          <li>Los clubes de lectura virtuales son inaccesibles, desorganizados o inexistentes en español</li>
-          <li>Los subrayados y anotaciones quedan dispersos sin organización ni inteligencia detrás</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-minus"/></svg></span></span>Estudiantes y lectores deben usar múltiples apps separadas para leer, organizar PDFs y crear tarjetas de estudio.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-minus"/></svg></span></span>Las apps existentes ofrecen recomendaciones genéricas basadas en popularidad, no en el perfil real del lector.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-minus"/></svg></span></span>Ninguna plataforma integra un asistente IA capaz de conversar sobre el libro sin enviar tu contenido a servidores externos.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-minus"/></svg></span></span>Los clubes de lectura virtuales son inaccesibles, desorganizados o inexistentes en español.</li>
         </ul>
       </div>
-      <div class="sol-box">
-        <div class="prob-sol-icon">✨</div>
+      <div class="sol-box reveal-right">
+        <div class="ps-icon"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-bulb"/></svg></span></div>
         <div class="prob-sol-title">Nuestra solución</div>
         <ul class="prob-sol-list">
-          <li>Motor de ML no supervisado que aprende tu perfil lector real y evoluciona con cada libro que lees</li>
-          <li>Asistente IA conversacional que vive en tu dispositivo: pregúntale lo que quieras al libro, en español</li>
-          <li>Clubes de lectura inteligentes que te conectan con personas que leen exactamente como tú</li>
-          <li>Organización automática de tus anotaciones por tema, sin que etiquetes nada manualmente</li>
-          <li>Privacidad por diseño: todo el procesamiento ocurre en infraestructura propia, cero APIs externas</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-check"/></svg></span></span>Sube tus propios PDFs y deja que la IA genere flashcards, cuestionarios y resúmenes al instante.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-check"/></svg></span></span>Motor de ML no supervisado que aprende tu perfil lector real y evoluciona con cada lectura.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-check"/></svg></span></span>Asistente IA conversacional que vive en tu dispositivo: pregúntale lo que quieras, en español.</li>
+          <li><span class="li-ico"><span class="ico" style="width:11px;height:11px"><svg width="11" height="11"><use href="#s-check"/></svg></span></span>Privacidad por diseño: todo el procesamiento ocurre en infraestructura propia, cero APIs externas.</li>
         </ul>
       </div>
     </div>
@@ -104,68 +156,132 @@
 <section id="funcionalidades">
   <div class="container">
     <p class="section-label reveal">Qué hace Tinta</p>
-    <h2 class="section-title reveal">Una app completa,<br>no un plugin</h2>
-    <p class="section-desc reveal">Tinta no es una extensión de navegador ni un add-on de Kindle. Es una plataforma integral construida desde cero para que la experiencia lectora sea inteligente en cada capa.</p>
-    <div class="feat-grid">
-      <div class="feat-card ai reveal">
+    <h2 class="section-title reveal">Un ecosistema completo<br>para cada tipo de usuario</h2>
+    <p class="section-desc reveal">Tinta no es solo un lector, es una plataforma integral con herramientas específicas para estudiantes, moderadores de comunidades y administradores del sistema.</p>
+
+    <!-- ROLES: LECTOR / ESTUDIANTE -->
+    <h3 class="role-title reveal">
+      <span class="ico" style="width:28px;height:28px"><svg width="28" height="28"><use href="#s-book"/></svg></span> 
+      Para el Lector y Estudiante
+    </h3>
+    <div class="feat-grid stagger">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-target"/></svg></span></div>
+        <span class="feat-tag">Lectura</span>
+        <div class="feat-title">Lectura y Progreso</div>
+        <div class="feat-desc">Explora el catálogo y lee con un marcador automático que guarda tu posición. Registra tu progreso y mantén tu biblioteca personal al día.</div>
+      </div>
+      <div class="feat-card ai reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-doc"/></svg></span></div>
+        <span class="feat-tag">Estudio · IA</span>
+        <div class="feat-title">Sube tus propios PDFs</div>
+        <div class="feat-desc">Importa apuntes, manuales o documentos. La IA los procesa para que puedas conversar con ellos, subrayar y registrar tu progreso.</div>
+      </div>
+      <div class="feat-card ai reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-brain"/></svg></span></div>
+        <span class="feat-tag">Estudio · IA</span>
+        <div class="feat-title">Flashcards y Cuestionarios</div>
+        <div class="feat-desc">Genera automáticamente tarjetas de repaso y cuestionarios interactivos a partir de tus PDFs para preparar exámenes de forma eficiente.</div>
+      </div>
+      <div class="feat-card ai reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-chat"/></svg></span></div>
         <span class="feat-tag">IA · LLM</span>
-        <div class="feat-title">Asistente conversacional del libro</div>
-        <div class="feat-desc">Hazle preguntas al libro en lenguaje natural. Personajes, tramas, citas, significados. La IA responde con contexto del capítulo en el que vas, sin spoilers.</div>
+        <div class="feat-title">Asistente conversacional</div>
+        <div class="feat-desc">Hazle preguntas al libro en lenguaje natural. Personajes, tramas o conceptos complejos. La IA responde con contexto del capítulo.</div>
       </div>
-      <div class="feat-card ai reveal">
-        <span class="feat-tag">IA · LLM</span>
-        <div class="feat-title">Resúmenes por capítulo</div>
-        <div class="feat-desc">Genera resúmenes breves antes de retomar la lectura. Ideal para recordar dónde estabas sin releer páginas enteras.</div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-group"/></svg></span></div>
+        <span class="feat-tag social">Social</span>
+        <div class="feat-title">Discusiones Anti-Spoiler</div>
+        <div class="feat-desc">Únete a clubes de lectura y participa en discusiones estructuradas por capítulo, garantizando que nunca te arruines la historia.</div>
       </div>
-      <div class="feat-card ai reveal">
-        <span class="feat-tag">IA · LLM</span>
-        <div class="feat-title">Aclaración de pasajes densos</div>
-        <div class="feat-desc">Reformula párrafos difíciles en lenguaje más accesible. Perfecto para filosofía, ensayo académico o prosa antigua.</div>
-      </div>
-      <div class="feat-card reveal">
-        <span class="feat-tag ml">ML</span>
-        <div class="feat-title">Recomendaciones "Para ti"</div>
-        <div class="feat-desc">Sistema híbrido (SVD + embeddings semánticos) que descubre libros alineados con tu gusto real, no con los más vendidos.</div>
-      </div>
-      <div class="feat-card reveal">
-        <span class="feat-tag ml">ML</span>
-        <div class="feat-title">Comunidades sugeridas</div>
-        <div class="feat-desc">Clustering HDBSCAN agrupa lectores naturalmente similares. Te propone clubes con personas que leen igual que tú, sin que busques.</div>
-      </div>
-      <div class="feat-card reveal">
-        <span class="feat-tag ml">ML</span>
-        <div class="feat-title">Retoma la lectura</div>
-        <div class="feat-desc">Isolation Forest detecta cuando estás por abandonar un libro y activa sugerencias personalizadas para retomarlo.</div>
-      </div>
-      <div class="feat-card reveal">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-tag"/></svg></span></div>
         <span class="feat-tag ml">ML</span>
         <div class="feat-title">Tus apuntes por tema</div>
-        <div class="feat-desc">Clustering sobre embeddings organiza automáticamente todos tus subrayados y notas por tema semántico, sin etiquetas manuales.</div>
+        <div class="feat-desc">Clustering sobre embeddings organiza automáticamente todos tus subrayados y anotaciones personales por tema, sin que etiquetes manualmente.</div>
       </div>
-      <div class="feat-card reveal">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-stars"/></svg></span></div>
         <span class="feat-tag ml">ML</span>
-        <div class="feat-title">Predicción de tiempo de lectura</div>
-        <div class="feat-desc">"Este libro te tomará 8 horas. Puedes terminarlo en 12 días leyendo 40 min al día." Regresión personalizada por lector.</div>
+        <div class="feat-title">Recomendaciones "Para ti"</div>
+        <div class="feat-desc">Sistema híbrido semántico que te sugiere nuevos libros y clubes basados en tu comportamiento real, no en listas genéricas.</div>
       </div>
-      <div class="feat-card reveal">
-        <span class="feat-tag social">Social</span>
-        <div class="feat-title">Clubes de lectura digitales</div>
-        <div class="feat-desc">Crea o únete a clubes por libro, con discusiones organizadas por capítulo, sistema anti-spoiler y moderación inteligente.</div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-reload"/></svg></span></div>
+        <span class="feat-tag ml">ML</span>
+        <div class="feat-title">Retoma la lectura</div>
+        <div class="feat-desc">Recibe alertas proactivas si llevas días sin abrir un libro. Isolation Forest detecta riesgo de abandono y sugiere cómo retomarlo.</div>
       </div>
-      <div class="feat-card ai reveal">
-        <span class="feat-tag">IA · LLM</span>
-        <div class="feat-title">Preguntas para el club</div>
-        <div class="feat-desc">La IA propone preguntas profundas y originales para dinamizar las sesiones de discusión de tu club.</div>
-      </div>
-      <div class="feat-card ai reveal">
-        <span class="feat-tag">IA · LLM</span>
-        <div class="feat-title">Búsqueda semántica</div>
-        <div class="feat-desc">Encuentra pasajes por significado, no por palabra exacta. "El momento en que el protagonista duda de su padre" funciona como búsqueda.</div>
-      </div>
-      <div class="feat-card reveal">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-trophy"/></svg></span></div>
         <span class="feat-tag social">Gamificación</span>
         <div class="feat-title">Logros y rachas</div>
-        <div class="feat-desc">Sistema de logros por libros leídos, rachas de lectura y metas de club que mantienen la motivación activa.</div>
+        <div class="feat-desc">Gana logros por libros terminados y mantén tus rachas de lectura activas. Un sistema diseñado para sostener tu motivación.</div>
+      </div>
+    </div>
+
+    <!-- ROLES: MODERADOR DE CLUB -->
+    <h3 class="role-title reveal">
+      <span class="ico" style="width:28px;height:28px"><svg width="28" height="28"><use href="#s-shield"/></svg></span> 
+      Para el Moderador de Club
+    </h3>
+    <div class="feat-grid stagger">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-users"/></svg></span></div>
+        <span class="feat-tag social">Gestión</span>
+        <div class="feat-title">Administración del Club</div>
+        <div class="feat-desc">Crea tu club de lectura y gestiona las membresías. Acepta o rechaza fácilmente nuevas solicitudes de ingreso al grupo.</div>
+      </div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-alert"/></svg></span></div>
+        <span class="feat-tag social">Gestión</span>
+        <div class="feat-title">Moderación de Discusiones</div>
+        <div class="feat-desc">Mantén un ambiente seguro y enfocado. Revisa hilos, modera la comunidad y elimina comentarios o mensajes inapropiados.</div>
+      </div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-clock"/></svg></span></div>
+        <span class="feat-tag social">Gestión</span>
+        <div class="feat-title">Metas y Calendario grupales</div>
+        <div class="feat-desc">Programa fechas límite por capítulo y establece metas de lectura conjuntas para mantener a toda la comunidad sincronizada y motivada.</div>
+      </div>
+      <div class="feat-card ai reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-question"/></svg></span></div>
+        <span class="feat-tag">IA · LLM</span>
+        <div class="feat-title">Preguntas generadas por IA</div>
+        <div class="feat-desc">Si te quedas sin ideas, la IA te propone preguntas profundas y originales para dinamizar las sesiones de discusión de tu comunidad.</div>
+      </div>
+    </div>
+
+    <!-- ROLES: ADMINISTRADOR -->
+    <h3 class="role-title reveal">
+      <span class="ico" style="width:28px;height:28px"><svg width="28" height="28"><use href="#s-server"/></svg></span> 
+      Para el Administrador
+    </h3>
+    <div class="feat-grid stagger">
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-books"/></svg></span></div>
+        <span class="feat-tag social">Admin</span>
+        <div class="feat-title">Gestión de Catálogo</div>
+        <div class="feat-desc">Control absoluto para agregar, editar o eliminar libros y categorías. Mantén la biblioteca oficial de la plataforma siempre impecable.</div>
+      </div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-cpu"/></svg></span></div>
+        <span class="feat-tag social">Admin</span>
+        <div class="feat-title">Supervisión de IA y LLM</div>
+        <div class="feat-desc">Monitorea en tiempo real el estado, la carga y el rendimiento del modelo de lenguaje autoalojado y los procesos de Machine Learning.</div>
+      </div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-chart"/></svg></span></div>
+        <span class="feat-tag social">Admin</span>
+        <div class="feat-title">Reportes y Métricas</div>
+        <div class="feat-desc">Accede a dashboards detallados con reportes agregados de uso, retención de lectura y métricas vitales de salud del sistema.</div>
+      </div>
+      <div class="feat-card reveal-scale">
+        <div class="feat-card-icon"><span class="ico" style="width:22px;height:22px"><svg width="22" height="22"><use href="#s-lock"/></svg></span></div>
+        <span class="feat-tag social">Admin</span>
+        <div class="feat-title">Control de Usuarios y Permisos</div>
+        <div class="feat-desc">Gestiona de forma segura los perfiles de la plataforma. Asigna roles, suspende cuentas infractoras o actualiza niveles de acceso.</div>
       </div>
     </div>
   </div>
@@ -174,28 +290,24 @@
 <section id="nodesplugin">
   <div class="container">
     <p class="section-label reveal">Diferenciador clave</p>
-    <h2 class="section-title reveal">Tinta no es un plugin.<br>Es una plataforma completa.</h2>
-    <p class="section-desc reveal">Goodreads es una red social sin IA. ChatGPT es una IA sin contexto de tu libro. Kindle es un lector sin comunidad. Tinta integra todo en un solo lugar, construido desde cero.</p>
-    <table class="comparison-table reveal">
-      <thead>
-        <tr>
-          <th>Capacidad</th>
-          <th class="tinta-col">Tinta ★</th>
-          <th>Goodreads</th>
-          <th>Kindle</th>
-          <th>ChatGPT</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>IA conversacional del libro</td><td class="yes tinta-col">✓ Local</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓ Externo</td></tr>
-        <tr><td>Comunidades inteligentes por perfil</td><td class="yes tinta-col">✓ ML</td><td class="no">Básico</td><td class="no">✗</td><td class="no">✗</td></tr>
-        <tr><td>Recomendaciones por comportamiento real</td><td class="yes tinta-col">✓ SVD+RAG</td><td class="no">Popularidad</td><td class="no">Compras</td><td class="no">✗</td></tr>
-        <tr><td>Anotaciones con IA organizadora</td><td class="yes tinta-col">✓</td><td class="no">✗</td><td class="no">Manual</td><td class="no">✗</td></tr>
-        <tr><td>Privacidad de datos total</td><td class="yes tinta-col">✓ On-premise</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
-        <tr><td>Anti-spoiler en discusiones</td><td class="yes tinta-col">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
-        <tr><td>Aplicación nativa independiente</td><td class="yes tinta-col">✓ Flutter</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">Plugin</td></tr>
-      </tbody>
-    </table>
+    <h2 class="section-title reveal"><br>Tinta es una plataforma completa.</h2>
+    <p class="section-desc reveal">Goodreads es una red social sin IA. ChatGPT es una IA sin contexto de tu libro. Kindle es un lector sin comunidad. Tinta integra todo en un solo lugar.</p>
+    
+    <!-- Envoltura para responsividad de tabla -->
+    <div class="table-wrapper reveal">
+      <table class="comparison-table">
+        <thead><tr><th>Capacidad</th><th class="tinta-col">Tinta ★</th><th>Goodreads</th><th>Kindle</th><th>ChatGPT</th></tr></thead>
+        <tbody>
+          <tr><td>Soporte PDFs y Flashcards IA</td><td class="yes tinta-col">✓ Sí</td><td class="no">✗</td><td class="no">Solo lectura</td><td class="no">Sin persistencia</td></tr>
+          <tr><td>IA conversacional del libro</td><td class="yes tinta-col">✓ Local</td><td class="no">✗</td><td class="no">✗</td><td class="yes">✓ Externo</td></tr>
+          <tr><td>Comunidades inteligentes por perfil</td><td class="yes tinta-col">✓ ML</td><td class="no">Básico</td><td class="no">✗</td><td class="no">✗</td></tr>
+          <tr><td>Recomendaciones por comportamiento real</td><td class="yes tinta-col">✓ SVD+RAG</td><td class="no">Popularidad</td><td class="no">Compras</td><td class="no">✗</td></tr>
+          <tr><td>Anotaciones con IA organizadora</td><td class="yes tinta-col">✓</td><td class="no">✗</td><td class="no">Manual</td><td class="no">✗</td></tr>
+          <tr><td>Privacidad de datos total</td><td class="yes tinta-col">✓ On-premise</td><td class="no">No</td><td class="no">No</td><td class="no">No</td></tr>
+          <tr><td>Aplicación nativa independiente</td><td class="yes tinta-col">✓ Flutter</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">Plugin</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
@@ -203,36 +315,37 @@
   <div class="container">
     <p class="section-label reveal">Estado del arte</p>
     <h2 class="section-title reveal">Lo que existe hoy<br>y por qué no alcanza</h2>
-    <p class="section-desc reveal">Analizamos las alternativas actuales. Cada una resuelve una parte del problema. Ninguna lo integra todo con IA local y privacidad real.</p>
-    <div class="arte-grid reveal">
-      <div class="arte-card">
-        <div class="arte-name">Goodreads</div>
-        <div class="arte-type">Red social de lectura</div>
+    <p class="section-desc reveal">Cada alternativa resuelve una parte. Ninguna integra todo con IA local y privacidad real.</p>
+    <div class="arte-grid stagger">
+      <div class="arte-card reveal-scale">
+        <div class="arte-card-icon" style="background:rgba(200,168,75,.1);color:#8B6914;"><span class="ico" style="width:20px;height:20px"><svg width="20" height="20"><use href="#s-share"/></svg></span></div>
+        <div class="arte-name">Goodreads</div><div class="arte-type">Red social de lectura</div>
         <div class="arte-pros">✓ Gran catálogo y comunidad establecida. ✓ Listas y reseñas de usuarios.</div>
         <div class="arte-cons">✗ Sin IA. Recomendaciones por popularidad. Propiedad de Amazon. Sin privacidad.</div>
       </div>
-      <div class="arte-card">
-        <div class="arte-name">Kindle / Apple Books</div>
-        <div class="arte-type">Lector digital</div>
+      <div class="arte-card reveal-scale">
+        <div class="arte-card-icon" style="background:rgba(28,58,43,.08);color:var(--verde);"><span class="ico" style="width:20px;height:20px"><svg width="20" height="20"><use href="#s-tablet"/></svg></span></div>
+        <div class="arte-name">Kindle / Apple Books</div><div class="arte-type">Lector digital</div>
         <div class="arte-pros">✓ Excelente experiencia de lectura. ✓ Sincronización entre dispositivos.</div>
-        <div class="arte-cons">✗ Ecosistema cerrado. Sin clubes. IA mínima. Datos enviados a la nube.</div>
+        <div class="arte-cons">✗ Ecosistema cerrado. Sin clubes. IA mínima. Datos en la nube.</div>
       </div>
-      <div class="arte-card">
-        <div class="arte-name">Storytel / Scribd</div>
-        <div class="arte-type">Suscripción de libros</div>
+      <div class="arte-card reveal-scale">
+        <div class="arte-card-icon" style="background:rgba(59,106,17,.08);color:#3B6D11;"><span class="ico" style="width:20px;height:20px"><svg width="20" height="20"><use href="#s-headphones"/></svg></span></div>
+        <div class="arte-name">Storytel / Scribd</div><div class="arte-type">Suscripción de libros</div>
         <div class="arte-pros">✓ Catálogo amplio en streaming. ✓ Audio y texto.</div>
         <div class="arte-cons">✗ Sin comunidad activa. Sin IA conversacional. Sin anotaciones.</div>
       </div>
-      <div class="arte-card">
-        <div class="arte-name">Literal Club</div>
-        <div class="arte-type">Social reading app</div>
+      <div class="arte-card reveal-scale">
+        <div class="arte-card-icon" style="background:rgba(99,56,6,.08);color:#854F0B;"><span class="ico" style="width:20px;height:20px"><svg width="20" height="20"><use href="#s-flame"/></svg></span></div>
+        <div class="arte-name">Literal Club</div><div class="arte-type">Social reading app</div>
         <div class="arte-pros">✓ Diseño moderno. ✓ Comunidad pequeña activa.</div>
-        <div class="arte-cons">✗ Sin IA. Sin recomendaciones inteligentes. Funcionalidad básica de red social.</div>
+        <div class="arte-cons">✗ Sin IA ni integración de PDFs. Sin herramientas de estudio.</div>
       </div>
-      <div class="arte-card highlight">
+      <div class="arte-card highlight reveal-scale">
+        <div class="arte-card-icon" style="background:rgba(28,58,43,.12);color:var(--verde);"><span class="ico" style="width:20px;height:20px"><svg width="20" height="20"><use href="#s-book"/></svg></span></div>
         <div class="arte-name" style="color:var(--verde)">Tinta ★</div>
         <div class="arte-type" style="color:var(--dorado)">Plataforma integral con IA local</div>
-        <div class="arte-pros" style="color:var(--verde)">✓ LLM autoalojado. ✓ ML no supervisado. ✓ Clubes con IA. ✓ Privacidad total. ✓ Comunidades inteligentes. ✓ Anotaciones organizadas.</div>
+        <div class="arte-pros" style="color:var(--verde)">✓ Soporte PDFs y flashcards. ✓ ML no supervisado. ✓ Clubes con IA. ✓ Privacidad total.</div>
         <div class="arte-cons" style="color:var(--gris)">En desarrollo activo — beta próximamente.</div>
       </div>
     </div>
@@ -244,54 +357,24 @@
     <p class="section-label reveal">Bajo el capó</p>
     <h2 class="section-title reveal">IA que protege<br>tu privacidad</h2>
     <p class="section-desc reveal">El asistente de Tinta usa Llama 3.2 corriendo en servidores propios. Tu contenido nunca sale del perímetro de la plataforma.</p>
-    <div class="ia-grid reveal">
-      <div class="ia-steps">
-        <div class="ia-step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <div class="step-title">Tu pregunta en español</div>
-            <div class="step-desc">spaCy procesa y normaliza tu consulta. Extrae entidades: personajes, eventos, lugares.</div>
-          </div>
-        </div>
-        <div class="ia-step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <div class="step-title">Embeddings semánticos</div>
-            <div class="step-desc">La pregunta se convierte en un vector de 384 dimensiones que captura el significado profundo.</div>
-          </div>
-        </div>
-        <div class="ia-step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <div class="step-title">Búsqueda RAG en el libro</div>
-            <div class="step-desc">Se recuperan los fragmentos más relevantes del libro usando similitud coseno en pgvector. Anti-spoiler activo.</div>
-          </div>
-        </div>
-        <div class="ia-step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <div class="step-title">Inferencia local con Llama</div>
-            <div class="step-desc">El modelo genera la respuesta en español con los fragmentos como contexto. Streaming en tiempo real.</div>
-          </div>
-        </div>
-        <div class="ia-step">
-          <div class="step-num">5</div>
-          <div class="step-content">
-            <div class="step-title">Respuesta verificada con citas</div>
-            <div class="step-desc">Guardrails valida la salida. Se añade la referencia exacta: "Esto aparece en el capítulo 3, página 87".</div>
-          </div>
-        </div>
+    <div class="ia-grid">
+      <div class="ia-steps reveal-left">
+        <div class="ia-step"><div class="step-num">1</div><div class="step-content"><div class="step-title">Tu pregunta en español</div><div class="step-desc">spaCy procesa y normaliza tu consulta. Extrae entidades: personajes, eventos, lugares.</div></div></div>
+        <div class="ia-step"><div class="step-num">2</div><div class="step-content"><div class="step-title">Embeddings semánticos</div><div class="step-desc">La pregunta se convierte en un vector de 384 dimensiones que captura el significado profundo.</div></div></div>
+        <div class="ia-step"><div class="step-num">3</div><div class="step-content"><div class="step-title">Búsqueda RAG en el libro</div><div class="step-desc">Se recuperan los fragmentos más relevantes usando similitud coseno en pgvector. Anti-spoiler activo.</div></div></div>
+        <div class="ia-step"><div class="step-num">4</div><div class="step-content"><div class="step-title">Inferencia local con Llama</div><div class="step-desc">El modelo genera la respuesta en español con los fragmentos como contexto. Streaming en tiempo real.</div></div></div>
+        <div class="ia-step"><div class="step-num">5</div><div class="step-content"><div class="step-title">Respuesta verificada con citas</div><div class="step-desc">Guardrails valida la salida. Se añade la referencia exacta al capítulo y página.</div></div></div>
       </div>
-      <div class="ia-stack">
-        <div class="stack-title">Stack de IA</div>
-        <div class="stack-row"><span class="stack-key">LLM</span><span class="stack-val">Llama 3.2 (3B Q5)</span></div>
-        <div class="stack-row"><span class="stack-key">Servidor</span><span class="stack-val">vLLM · Sin egress</span></div>
-        <div class="stack-row"><span class="stack-key">NLP</span><span class="stack-val">spaCy es_core_news_md</span></div>
-        <div class="stack-row"><span class="stack-key">Embeddings</span><span class="stack-val">multilingual-e5-small</span></div>
-        <div class="stack-row"><span class="stack-key">Vectores</span><span class="stack-val">PostgreSQL + pgvector</span></div>
-        <div class="stack-row"><span class="stack-key">ML</span><span class="stack-val">scikit-learn · HDBSCAN</span></div>
-        <div class="stack-row"><span class="stack-key">Retraining</span><span class="stack-val">Airflow · MLflow</span></div>
-        <div class="stack-row"><span class="stack-key">App móvil</span><span class="stack-val">Flutter (iOS + Android)</span></div>
+      <div class="ia-stack reveal-right">
+        <div class="stack-title"><span class="ico" style="width:18px;height:18px"><svg width="18" height="18"><use href="#s-cpu"/></svg></span> Stack de IA</div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-brain"/></svg></span> LLM</span><span class="stack-val">Llama 3.2 (3B Q5)</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-server"/></svg></span> Servidor</span><span class="stack-val">vLLM · Sin egress</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-translate"/></svg></span> NLP</span><span class="stack-val">spaCy es_core_news_md</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-vector"/></svg></span> Embeddings</span><span class="stack-val">multilingual-e5-small</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-db"/></svg></span> Vectores</span><span class="stack-val">PostgreSQL + pgvector</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-chart"/></svg></span> ML</span><span class="stack-val">scikit-learn · HDBSCAN</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-refresh"/></svg></span> Retraining</span><span class="stack-val">Airflow · MLflow</span></div>
+        <div class="stack-row"><span class="stack-key"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-phone"/></svg></span> App móvil</span><span class="stack-val">Flutter (iOS + Android)</span></div>
       </div>
     </div>
   </div>
@@ -301,35 +384,35 @@
   <div class="container">
     <p class="section-label reveal">A quién va dirigido</p>
     <h2 class="section-title reveal">Lectores reales con<br>necesidades concretas</h2>
-    <p class="section-desc reveal">Tinta está diseñada para personas que ya leen, quieren leer más, o buscan comunidad alrededor de los libros.</p>
-    <div class="pub-grid">
-      <div class="pub-card reveal">
-        <div class="pub-icon">📚</div>
+    <p class="section-desc reveal">Tinta está diseñada para personas que ya leen, quieren leer más, o buscan estudiar acompañados de Inteligencia Artificial.</p>
+    <div class="pub-grid stagger">
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(200,168,75,.1);color:#8B6914;"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-books"/></svg></span></div>
         <div class="pub-title">Lectores habituales</div>
-        <div class="pub-desc">Personas que leen 2+ libros al mes y quieren un espacio para organizar su biblioteca, anotaciones y descubrir lecturas afines.</div>
+        <div class="pub-desc">Personas que leen 2+ libros al mes y quieren organizar su biblioteca, anotaciones y descubrir lecturas afines.</div>
       </div>
-      <div class="pub-card reveal">
-        <div class="pub-icon">🎓</div>
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(28,58,43,.08);color:var(--verde);"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-school"/></svg></span></div>
         <div class="pub-title">Estudiantes y académicos</div>
-        <div class="pub-desc">Universitarios que leen material denso y necesitan resúmenes, aclaraciones y organización de notas por tema para sus estudios.</div>
+        <div class="pub-desc">Universitarios que leen material denso y necesitan crear flashcards, resúmenes y cuestionarios desde sus PDFs.</div>
       </div>
-      <div class="pub-card reveal">
-        <div class="pub-icon">🏫</div>
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(59,106,17,.08);color:#3B6D11;"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-building"/></svg></span></div>
         <div class="pub-title">Instituciones educativas</div>
-        <div class="pub-desc">Escuelas y universidades que quieren fomentar la lectura con herramientas modernas, clubes digitales y métricas de progreso.</div>
+        <div class="pub-desc">Escuelas y universidades que quieren fomentar la lectura con clubes digitales y métricas de progreso.</div>
       </div>
-      <div class="pub-card reveal">
-        <div class="pub-icon">👥</div>
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(83,74,183,.08);color:#534AB7;"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-users"/></svg></span></div>
         <div class="pub-title">Clubes de lectura existentes</div>
-        <div class="pub-desc">Grupos que ya se reúnen a discutir libros y buscan una plataforma digital que estructure sus sesiones con IA.</div>
+        <div class="pub-desc">Grupos que ya se reúnen y buscan una plataforma digital que estructure sus sesiones con IA.</div>
       </div>
-      <div class="pub-card reveal">
-        <div class="pub-icon">🌐</div>
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(24,95,165,.08);color:#185FA5;"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-globe"/></svg></span></div>
         <div class="pub-title">Lectores en español</div>
         <div class="pub-desc">Hablantes de español que no encuentran plataformas con IA de calidad en su idioma. Tinta nace hispanohablante.</div>
       </div>
-      <div class="pub-card reveal">
-        <div class="pub-icon">🔐</div>
+      <div class="pub-card reveal-scale">
+        <div class="pub-icon" style="background:rgba(163,45,45,.08);color:#A32D2D;"><span class="ico" style="width:26px;height:26px"><svg width="26" height="26"><use href="#s-shield"/></svg></span></div>
         <div class="pub-title">Usuarios conscientes de su privacidad</div>
         <div class="pub-desc">Personas que no quieren que sus hábitos de lectura sean analizados por Big Tech. Tinta no vende sus datos.</div>
       </div>
@@ -342,66 +425,45 @@
     <p class="section-label reveal">Modelo de negocio</p>
     <h2 class="section-title reveal">Planes pensados para<br>cada tipo de lector</h2>
     <p class="section-desc reveal">Tinta es rentable sin comprometer la experiencia ni la privacidad. Sin anuncios. Sin venta de datos.</p>
-    <div class="planes-grid">
-      <div class="plan-card reveal">
-        <div class="plan-label">Gratuito</div>
-        <div class="plan-name">Lector</div>
-        <div class="plan-price">$0</div>
-        <div class="plan-period">para siempre</div>
+    <div class="planes-grid stagger">
+      <div class="plan-card reveal-scale">
+        <div class="plan-label">Gratuito</div><div class="plan-name">Lector</div>
+        <div class="plan-price">$0</div><div class="plan-period">para siempre</div>
         <ul class="plan-features">
-          <li><span class="chk">✓</span> Hasta 5 libros en biblioteca</li>
-          <li><span class="chk">✓</span> Recomendaciones básicas</li>
-          <li><span class="chk">✓</span> 1 club de lectura</li>
-          <li><span class="chk">✓</span> Anotaciones manuales</li>
-          <li><span class="chk">✓</span> 10 consultas IA al mes</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Hasta 5 libros en biblioteca</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Recomendaciones básicas</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>1 club de lectura</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Anotaciones manuales</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>10 consultas IA al mes</li>
         </ul>
         <a href="#cta" class="plan-btn plan-btn-outline">Comenzar gratis</a>
       </div>
-      <div class="plan-card featured reveal">
-        <div class="plan-label">Más popular</div>
-        <div class="plan-name">Escritor</div>
-        <div class="plan-price">$7</div>
-        <div class="plan-period">USD / mes</div>
+      <div class="plan-card featured reveal-scale">
+        <div class="plan-label">Más popular</div><div class="plan-name">Escritor</div>
+        <div class="plan-price">$70</div><div class="plan-period">MX / mes</div>
         <ul class="plan-features">
-          <li><span class="chk">✓</span> Biblioteca ilimitada</li>
-          <li><span class="chk">✓</span> IA conversacional sin límite</li>
-          <li><span class="chk">✓</span> Clubes ilimitados</li>
-          <li><span class="chk">✓</span> Anotaciones organizadas por IA</li>
-          <li><span class="chk">✓</span> Predicción de tiempo de lectura</li>
-          <li><span class="chk">✓</span> Resúmenes por capítulo</li>
-          <li><span class="chk">✓</span> Búsqueda semántica</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Biblioteca e importación PDF ilimitada</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>IA conversacional sin límite</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Flashcards y Quizzes IA</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Anotaciones organizadas por IA</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Predicción de tiempo de lectura</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Resúmenes por capítulo</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Búsqueda semántica</li>
         </ul>
         <a href="#cta" class="plan-btn plan-btn-filled">Empezar prueba gratuita</a>
       </div>
-      <div class="plan-card reveal">
-        <div class="plan-label">Institucional</div>
-        <div class="plan-name">Club Pro</div>
-        <div class="plan-price">$29</div>
-        <div class="plan-period">USD / mes · hasta 50 miembros</div>
+      <div class="plan-card reveal-scale">
+        <div class="plan-label">Institucional</div><div class="plan-name">Club Pro</div>
+        <div class="plan-price">$200</div><div class="plan-period">MX / mes · hasta 50 miembros</div>
         <ul class="plan-features">
-          <li><span class="chk">✓</span> Todo lo de Escritor</li>
-          <li><span class="chk">✓</span> Panel de administración</li>
-          <li><span class="chk">✓</span> Métricas de lectura del grupo</li>
-          <li><span class="chk">✓</span> Preguntas IA para sesiones</li>
-          <li><span class="chk">✓</span> Soporte prioritario</li>
-          <li><span class="chk">✓</span> Catálogo curado por moderador</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Todo lo de Escritor</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Panel de administración de Club</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Métricas de lectura del grupo</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Preguntas IA para sesiones</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Soporte prioritario</li>
+          <li><span class="chk"><span class="ico" style="width:16px;height:16px"><svg width="16" height="16"><use href="#s-check"/></svg></span></span>Catálogo curado por moderador</li>
         </ul>
         <a href="#cta" class="plan-btn plan-btn-outline">Contactar ventas</a>
-      </div>
-      <div class="plan-card reveal">
-        <div class="plan-label">Educación</div>
-        <div class="plan-name">Institución</div>
-        <div class="plan-price">Custom</div>
-        <div class="plan-period">acuerdo anual</div>
-        <ul class="plan-features">
-          <li><span class="chk">✓</span> Despliegue on-premise</li>
-          <li><span class="chk">✓</span> SSO institucional</li>
-          <li><span class="chk">✓</span> Usuarios ilimitados</li>
-          <li><span class="chk">✓</span> Integración LMS</li>
-          <li><span class="chk">✓</span> SLA garantizado</li>
-          <li><span class="chk">✓</span> Capacitación incluida</li>
-        </ul>
-        <a href="#cta" class="plan-btn plan-btn-outline">Hablar con el equipo</a>
       </div>
     </div>
   </div>
@@ -410,36 +472,41 @@
 <section id="cta">
   <div class="cta-glow"></div>
   <div class="container" style="position:relative;">
-    <p class="section-label reveal">Únete a la beta</p>
     <h2 class="section-title reveal">Tu próxima lectura<br>debería ser <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--dorado)">diferente</em></h2>
     <p class="section-desc reveal">Sé de los primeros en experimentar la lectura con inteligencia real, comunidad auténtica y privacidad garantizada.</p>
     <div class="hero-btns reveal">
-      <a href="#" class="btn-primary" style="font-size:1.05rem;padding:1rem 2.5rem;">Quiero acceso anticipado</a>
+
     </div>
-    <p class="cta-note reveal">Sin tarjeta de crédito · Acceso beta gratuito · Disponible en iOS y Android</p>
+    <p class="cta-note reveal">
+      <span class="cta-note-item"><span class="ico" style="width:14px;height:14px"><svg width="14" height="14"><use href="#s-phone"/></svg></span>Disponible en iOS y Android</span>
+    </p>
   </div>
 </section>
 
 <footer>
+  <span class="ico" style="width:14px;height:14px;color:rgba(245,237,216,.4)"><svg width="14" height="14"><use href="#s-book"/></svg></span>
   Tinta · Club de lectura digital con IA local · Proyecto Integrador · Noveno Cuatrimestre · Mayo–Agosto 2026
 </footer>
 
 <script>
-// Reveal on scroll
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){e.target.classList.add('visible');}
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
   });
-},{threshold:0.12});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}, {threshold: 0.1, rootMargin: '0px 0px -40px 0px'});
 
-// Ink underline trigger
-const inkObs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => obs.observe(el));
+
+const inkObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
     if(e.isIntersecting) e.target.classList.add('drawn');
   });
-},{threshold:0.5});
-document.querySelectorAll('.ink-underline').forEach(el=>inkObs.observe(el));
+}, {threshold: 0.5});
+
+document.querySelectorAll('.ink-underline').forEach(el => inkObs.observe(el));
 </script>
 </body>
 </html>
